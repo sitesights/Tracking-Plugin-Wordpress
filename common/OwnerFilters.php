@@ -14,4 +14,17 @@ class OwnerFilters {
 
     }
 
+    public function addPluginActions($actions) {
+
+        $add = [
+            "options" 
+                => "<a href='" . admin_url("admin.php?page=" . SITESIGHTS_PAGE_SETTINGS) . "'>Options</a>",
+            "documentation"
+                => "<a href='" . esc_url_raw("https://docs.sitesights.io/plugins/wordpress") . "' target='_blank'>Documentation</a>",
+        ];
+
+        return array_merge($add, $actions);
+
+    }
+
 }

@@ -22,9 +22,12 @@ class Tracking {
 
         if(is_admin()) {
 
+            new OwnerActions();
+            new OwnerFilters();
+
         }
 
-
+        
 
     }
 
