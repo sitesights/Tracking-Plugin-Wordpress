@@ -19,8 +19,11 @@ define("SITESIGHTS_TRACKING_VERSION", "0.0.1");
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/Utils.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "config.php";
 
-require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/OwnerActions.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/OwnerFilters.php";
+require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/OwnerActions.php";
+
+require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/Filters.php";
+require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/Actions.php";
 
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/pages/Renderer.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/pages/OptionsPage.php";

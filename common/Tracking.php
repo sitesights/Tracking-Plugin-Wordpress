@@ -22,15 +22,16 @@ class Tracking {
 
         if(is_admin()) {
 
-            new OwnerActions();
             new OwnerFilters();
+            new OwnerActions();
 
             new OptionsPage();
             new DashboardPage();
 
         }
 
-
+        new Filters();
+        new Actions();
 
     }
 
@@ -49,7 +50,7 @@ class Tracking {
             update_option(SITESIGHTS_SETTINGS_KEY_WEBSITE_ID, "");
             update_option(SITESIGHTS_SETTINGS_KEY_URL, "");
             update_option(SITESIGHTS_SETTINGS_KEY_THEME, "light");
-            update_option(SITESIGHTS_SETTINGS_KEY_ENABLED_ADMIN, true);
+            update_option(SITESIGHTS_SETTINGS_KEY_ENABLED_ADMIN, false);
             update_option(SITESIGHTS_SETTINGS_KEY_ENABLED, true);
 
             update_option(SITESIGHTS_SETTINGS_KEY_AVAILABLE, true);
