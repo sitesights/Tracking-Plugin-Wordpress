@@ -22,6 +22,10 @@ require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "config.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/OwnerActions.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/OwnerFilters.php";
 
+require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/pages/Renderer.php";
+require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/pages/OptionsPage.php";
+require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/pages/DashboardPage.php";
+
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/Tracking.php";
 
 $tracking = new Tracking();
