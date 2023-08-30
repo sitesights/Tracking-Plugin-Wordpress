@@ -24,13 +24,13 @@ class Tracking {
 
         }
 
-        
+
 
     }
 
     public function onLoadTextDomain() {
 
-        load_plugin_textdomain("sitesights-tracking", false, dirname(PLAUSIBLE_ANALYTICS_PLUGIN_BASENAME) . "/languages/");
+        load_plugin_textdomain("sitesights-tracking", false, dirname(SITESIGHTS_TRACKING_PLUGIN_BASENAME) . "/languages/");
 
     }
 
