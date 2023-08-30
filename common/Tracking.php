@@ -24,6 +24,8 @@ class Tracking {
 
         }
 
+        
+
     }
 
     public function onLoadTextDomain() {

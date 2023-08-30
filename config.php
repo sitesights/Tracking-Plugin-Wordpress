@@ -20,6 +20,16 @@ if(!defined("SITESIGHTS_TRACKING_PLUGIN_URL")) {
 	define("SITESIGHTS_TRACKING_PLUGIN_URL", plugin_dir_url(SITESIGHTS_TRACKING_PLUGIN_FILE));
 }
 
+//Admin pages
+
+if(!defined("SITESIGHTS_PAGE_SETTINGS")) {
+	define("SITESIGHTS_PAGE_SETTINGS", "sitesights_settings");
+}
+
+if(!defined("SITESIGHTS_PAGE_DASHBOARD")) {
+	define("SITESIGHTS_PAGE_DASHBOARD", "sitesights_tracking_dashboard");
+}
+
 //Settings keys
 
 if(!defined("SITESIGHTS_SETTINGS_KEY_WEBSITE_ID")) {
