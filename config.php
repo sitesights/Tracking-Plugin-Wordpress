@@ -51,3 +51,7 @@ if(!defined("SITESIGHTS_SETTINGS_KEY_THEME")) {
 if(!defined("SITESIGHTS_SETTINGS_KEY_ENABLED")) {
 	define("SITESIGHTS_SETTINGS_KEY_ENABLED", "sitesights_tracking_enabled");
 }
+
+if(!defined("SITESIGHTS_SETTINGS_KEY_ENABLED_ADMIN")) {
+	define("SITESIGHTS_SETTINGS_KEY_ENABLED_ADMIN", "sitesights_tracking_enabled_admin");
+}
