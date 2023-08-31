@@ -26,7 +26,7 @@ class Filters {
             return str_replace(" src", " defer src", $tag);
         }
 
-        $wid = get_option(SITESIGHTS_SETTINGS_KEY_WEBSITE_ID, "");
+        $wid = trim(get_option(SITESIGHTS_SETTINGS_KEY_WEBSITE_ID, ""));
         $args = "data-website-uid='" . $wid . "'";
 
         return str_replace(" src", " " . $args . " defer src", $tag);

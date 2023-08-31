@@ -35,11 +35,9 @@ class DashboardPage extends Renderer {
             $this->renderHeader();
             ?>
                 <div class="sitesights-stages">
-                    <div class="sitesights-stage">
-                        <div class="notice">
-                            You have to setup your public share link in the SiteSights Options 
-                            <a class="<?php echo admin_url("admin.php?page=" . SITESIGHTS_PAGE_SETTINGS) ?>">here</a>.
-                        </div>
+                    <div class="notice">
+                        You have to setup your public share link in the SiteSights Options 
+                        <a href="<?php echo admin_url("admin.php?page=" . SITESIGHTS_PAGE_SETTINGS) ?>">here</a>.
                     </div>
                 </div>
             <?php
@@ -50,8 +48,10 @@ class DashboardPage extends Renderer {
 
             ?>
 
-            <iframe width="100%" height="90svh" src="<?php echo $link . "&theme=" . $theme ?>">
-            </iframe>
+            <div class="sitesights-frame">
+                <iframe width="100%" height="700px" src="<?php echo $link . "&theme=" . $theme ?>">
+                </iframe>
+            </div>
 
             <?php
 
