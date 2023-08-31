@@ -22,6 +22,12 @@ class Actions {
             return;
         }
 
+        $enable = get_option(SITESIGHTS_SETTINGS_KEY_ENABLED, true);
+
+        if(!$enable) {
+            return;
+        }
+
         $url = esc_url("https://app-static.sitesights.io/client.min.js");
         wp_enqueue_script("sitesights-tracking", $url, "", "2", false);
 

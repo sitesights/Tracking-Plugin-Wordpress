@@ -1,11 +1,13 @@
 <?php
 
+namespace SiteSights\Tracking\WP;
+
 if(!defined("ABSPATH")) {
 	exit;
 }
 
 if(!defined("SITESIGHTS_TRACKING_PLUGIN_FILE")) {
-	define("SITESIGHTS_TRACKING_PLUGIN_FILE", dirname(dirname( __FILE__ )) . "/sitesights-tracking.php");
+	define("SITESIGHTS_TRACKING_PLUGIN_FILE", dirname( __FILE__ ) . "/sitesights-tracking.php");
 }
 
 if(!defined("SITESIGHTS_TRACKING_PLUGIN_BASENAME")) {

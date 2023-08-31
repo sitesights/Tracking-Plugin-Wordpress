@@ -25,9 +25,37 @@ class DashboardPage extends Renderer {
 
     public function render() {
 
-        ?>
-            <div>Test Dashboard</div>
-        <?php
+        $link = trim(get_option(SITESIGHTS_SETTINGS_KEY_URL, ""));
+        $theme = get_option(SITESIGHTS_SETTINGS_KEY_THEME, "light");
+
+        if(strlen($link) == 0) {
+
+            ?> <div class="sitesights-main"> <?php
+
+            $this->renderHeader();
+            ?>
+                <div class="sitesights-stages">
+                    <div class="sitesights-stage">
+                        <div class="notice">
+                            You have to setup your public share link in the SiteSights Options 
+                            <a class="<?php echo admin_url("admin.php?page=" . SITESIGHTS_PAGE_SETTINGS) ?>">here</a>.
+                        </div>
+                    </div>
+                </div>
+            <?php
+
+            ?> </div> <?php
+
+        } else {
+
+            ?>
+
+            <iframe width="100%" height="90svh" src="<?php echo $link . "&theme=" . $theme ?>">
+            </iframe>
+
+            <?php
+
+        }
 
     }
 

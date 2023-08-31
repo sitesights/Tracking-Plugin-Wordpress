@@ -13,7 +13,7 @@ class Tracking {
         register_activation_hook(SITESIGHTS_TRACKING_PLUGIN_FILE, [$this, "onActivate"]);
         register_deactivation_hook(SITESIGHTS_TRACKING_PLUGIN_FILE, [$this, "onDeactivate"]);
 
-        add_action("plugins_loaded", [$this, "onLoad", 9]);
+        add_action("plugins_loaded", [$this, "onLoad"], 9);
         add_action("init", [$this, "onLoadTextDomain"]);
 
     }
@@ -37,7 +37,7 @@ class Tracking {
 
     public function onLoadTextDomain() {
 
-        load_plugin_textdomain("sitesights-tracking", false, dirname(SITESIGHTS_TRACKING_PLUGIN_BASENAME) . "/languages/");
+        //load_plugin_textdomain("sitesights-tracking", false, dirname(SITESIGHTS_TRACKING_PLUGIN_BASENAME) . "/languages/");
 
     }
 

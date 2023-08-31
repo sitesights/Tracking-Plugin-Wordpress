@@ -15,8 +15,8 @@ class OwnerActions {
     }
 
     public function initStatics($page) {
-
-        if($page != SITESIGHTS_PAGE_SETTINGS && $page != SITESIGHTS_PAGE_DASHBOARD) {
+        
+        if($page !== "settings_page_sitesights_settings" && $page !== "dashboard_page_sitesights_tracking_dashboard") {
             return;
         }
 

@@ -18,16 +18,23 @@ class OptionsPage extends Renderer {
 
         $requiredCapability = "manage_options";
 
-        add_dashboard_page("SiteSights Dashboard", "SiteSights Dashboard", $requiredCapability, 
-            SITESIGHTS_PAGE_DASHBOARD, [$this, "render"]);
+        add_options_page("SiteSights Options", "SiteSights Options", $requiredCapability, 
+            SITESIGHTS_PAGE_SETTINGS, [$this, "render"]);
 
     }
 
     public function render() {
 
+        ?> <div class="sitesights-main"> <?php
+
+        $this->renderHeader();
         ?>
-            <div>Test Options</div>
+            <div class="sitesights-stages">
+
+            </div>
         <?php
+
+        ?> </div> <?php
 
     }
 
