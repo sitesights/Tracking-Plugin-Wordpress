@@ -6,7 +6,7 @@
  * Description: Easy and privacy focused web analytics.
  * Author: Sitesights.io
  * Author URI: https://sitesights.io/
- * Version: 0.0.1
+ * Version: 1.0.0
  * Text Domain: sitesights-tracking
  * Domain Path: /languages
  */
@@ -14,7 +14,7 @@
 namespace SiteSights\Tracking\WP;
 
 if(!defined("ABSPATH")) { exit; }
-define("SITESIGHTS_TRACKING_VERSION", "0.0.1");
+define("SITESIGHTS_TRACKING_VERSION", "1.0.0");
 
 require_once __DIR__ . "/config.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/Utils.php";
