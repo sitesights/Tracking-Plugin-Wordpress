@@ -5,7 +5,6 @@
  * Plugin URI: https://sitesights.io/
  * Description: Easy and privacy focused web analytics.
  * Author: Sitesights.io
- * Author URI: https://sitesights.io/
  * Version: 1.0.0
  * Text Domain: sitesights-tracking
  * Domain Path: /languages
