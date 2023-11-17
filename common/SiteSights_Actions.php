@@ -6,7 +6,7 @@ if(!defined("ABSPATH")) {
 	exit;
 }
 
-class Actions {
+class SiteSights_Actions {
 
     public function __construct() {
         

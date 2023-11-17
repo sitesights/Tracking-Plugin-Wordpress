@@ -6,7 +6,7 @@ if(!defined("ABSPATH")) {
 	exit;
 }
 
-class OwnerActions {
+class SiteSights_OwnerActions {
 
     public function __construct() {
         

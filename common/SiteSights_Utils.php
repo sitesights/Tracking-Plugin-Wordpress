@@ -6,7 +6,7 @@ if(!defined("ABSPATH")) {
 	exit;
 }
 
-class Utils {
+class SiteSights_Utils {
 
     public static function getDefaultDomain() {
 

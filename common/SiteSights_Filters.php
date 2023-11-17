@@ -6,7 +6,7 @@ if(!defined("ABSPATH")) {
 	exit;
 }
 
-class Filters {
+class SiteSights_Filters {
 
     public function __construct() {
         

@@ -6,7 +6,7 @@ if(!defined("ABSPATH")) {
 	exit;
 }
 
-class OwnerFilters {
+class SiteSights_OwnerFilters {
 
     public function __construct() {
         

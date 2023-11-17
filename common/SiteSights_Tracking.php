@@ -6,7 +6,7 @@ if(!defined("ABSPATH")) {
 	exit;
 }
 
-class Tracking {
+class SiteSights_Tracking {
 
     public function enable() {
 
@@ -22,16 +22,16 @@ class Tracking {
 
         if(is_admin()) {
 
-            new OwnerFilters();
-            new OwnerActions();
+            new SiteSights_OwnerFilters();
+            new SiteSights_OwnerActions();
 
-            new OptionsPage();
-            new DashboardPage();
+            new SiteSights_OptionsPage();
+            new SiteSights_DashboardPage();
 
         }
 
-        new Filters();
-        new Actions();
+        new SiteSights_Filters();
+        new SiteSights_Actions();
 
     }
 

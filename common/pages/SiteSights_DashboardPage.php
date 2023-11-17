@@ -6,7 +6,7 @@ if(!defined("ABSPATH")) {
 	exit;
 }
 
-class DashboardPage extends Renderer {
+class SiteSights_DashboardPage extends SiteSights_Renderer {
 
     public function __construct() {
         
@@ -37,7 +37,7 @@ class DashboardPage extends Renderer {
                 <div class="sitesights-stages">
                     <div class="notice">
                         You have to setup your public share link in the SiteSights Options 
-                        <a href="<?php echo admin_url("admin.php?page=" . SITESIGHTS_PAGE_SETTINGS) ?>">here</a>.
+                        <a href="<?php echo esc_url(admin_url("admin.php?page=" . SITESIGHTS_PAGE_SETTINGS)) ?>">here</a>.
                     </div>
                 </div>
             <?php
@@ -49,7 +49,7 @@ class DashboardPage extends Renderer {
             ?>
 
             <div class="sitesights-frame">
-                <iframe width="100%" height="700px" src="<?php echo $link . "&theme=" . $theme ?>">
+                <iframe width="100%" height="700px" src="<?php echo esc_url($link . "&theme=" . $theme) ?>">
                 </iframe>
             </div>
 

@@ -6,7 +6,7 @@ if(!defined("ABSPATH")) {
 	exit;
 }
 
-class OptionsPage extends Renderer {
+class SiteSights_OptionsPage extends SiteSights_Renderer {
 
     public function __construct() {
         
@@ -26,10 +26,10 @@ class OptionsPage extends Renderer {
     public function onSave() {
 
         if(isset($_POST["sitesights-uid"]))
-            update_option(SITESIGHTS_SETTINGS_KEY_WEBSITE_ID, $_POST["sitesights-uid"]);
+            update_option(SITESIGHTS_SETTINGS_KEY_WEBSITE_ID, sanitize_text_field($_POST["sitesights-uid"]));
 
         if(isset($_POST["sitesights-share-url"]))
-            update_option(SITESIGHTS_SETTINGS_KEY_URL, $_POST["sitesights-share-url"]);
+            update_option(SITESIGHTS_SETTINGS_KEY_URL, sanitize_text_field($_POST["sitesights-share-url"]));
 
         if(isset($_POST["sitesights-theme"]))
             update_option(SITESIGHTS_SETTINGS_KEY_THEME, $_POST["sitesights-theme"] == "light" ? "light" : "dark");
@@ -67,7 +67,7 @@ class OptionsPage extends Renderer {
                             <a href="https://app.sitesights.io/websites" target="_blank">sitesights.io</a> under <strong>Websites</strong> > <strong>Edit Website</strong>.
                         </div>
                         <div class="sitesights-input">
-                            <input value="<?php echo $wid ?>" type="text" maxlength="300" id="sitesights-uid" name="sitesights-uid" placeholder="Example: 8WK_Jz8b00SMgqm8pBZcCg" />
+                            <input value="<?php echo esc_attr($wid) ?>" type="text" maxlength="300" id="sitesights-uid" name="sitesights-uid" placeholder="Example: 8WK_Jz8b00SMgqm8pBZcCg" />
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ class OptionsPage extends Renderer {
                             After enabling, you need to paste the share url down below.
                         </div>
                         <div class="sitesights-input">
-                            <input value="<?php echo $link ?>" type="text" maxlength="300" id="sitesights-share-url" name="sitesights-share-url" placeholder="Example: https://app.sitesights.io/share?id=YYY" />
+                            <input value="<?php echo esc_url($link) ?>" type="text" maxlength="300" id="sitesights-share-url" name="sitesights-share-url" placeholder="Example: https://app.sitesights.io/share?id=YYY" />
                         </div>
                         <div class="sitesights-title sub">
                             Dashboard Theme
