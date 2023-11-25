@@ -46,11 +46,12 @@ class SiteSights_DashboardPage extends SiteSights_Renderer {
 
         } else {
 
+            $this->renderHeader();
+
             ?>
 
             <div class="sitesights-frame">
-                <iframe width="100%" height="700px" src="<?php echo esc_url($link . "&theme=" . $theme) ?>">
-                </iframe>
+                <button type="button" onclick="window.open('<?php echo esc_url($link . "&theme=" . $theme) ?>', '_blank')">Open public dashboard in new tab</button>
             </div>
 
             <?php
