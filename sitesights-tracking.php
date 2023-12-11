@@ -6,6 +6,11 @@
  * Description: Easy and privacy focused web analytics.
  * Author: Sitesights.io
  * Version: 1.0.1
+ * License: Massachusetts Institute of Technology (MIT) license
+ * License URI: https://opensource.org/licenses/MIT
+ * Requires at least: 4.8
+ * Tested up to: 6.4.2
+ * Requires PHP: 5.6
  * Text Domain: sitesights-tracking
  * Domain Path: /languages
  */
