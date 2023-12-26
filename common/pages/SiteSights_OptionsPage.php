@@ -41,8 +41,10 @@ class SiteSights_OptionsPage extends SiteSights_Renderer {
 
     public function render() {
 
-        if(isset($_POST["sitesights-uid"])) {
-            $this->onSave();
+        if(isset($_POST["sitesights_options_nonce"]) && wp_verify_nonce($_POST["sitesights_options_nonce"], "sitesights_options_form")) {
+            if(isset($_POST["sitesights-uid"])) {
+                $this->onSave();
+            }
         }
 
         $link = get_option(SITESIGHTS_SETTINGS_KEY_URL, "");
@@ -56,6 +58,7 @@ class SiteSights_OptionsPage extends SiteSights_Renderer {
 
         $this->renderHeader();
         ?>
+            <?php wp_nonce_field('sitesights_options_form', 'sitesights_options_nonce') ?>
             <div class="sitesights-stages">
                 <div class="sitesights-stage dashboard">
                     <div class="sitesights-title">
