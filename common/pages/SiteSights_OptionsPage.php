@@ -41,7 +41,7 @@ class SiteSights_OptionsPage extends SiteSights_Renderer {
 
     public function render() {
 
-        if(isset($_POST["sitesights_options_nonce"]) && wp_verify_nonce($_POST["sitesights_options_nonce"], "sitesights_options_form")) {
+        if(isset($_POST["sitesights_options_nonce"]) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST["sitesights_options_nonce"])), "sitesights_options_form")) {
             if(isset($_POST["sitesights-uid"])) {
                 $this->onSave();
             }
