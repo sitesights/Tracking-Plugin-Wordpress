@@ -5,7 +5,7 @@
  * Plugin URI: https://sitesights.io/
  * Description: Easy and privacy focused web analytics.
  * Author: Sitesights.io
- * Version: 1.0.1
+ * Version: 1.1.0
  * License: Massachusetts Institute of Technology (MIT) license
  * License URI: https://opensource.org/licenses/MIT
  * Requires at least: 4.8
@@ -18,7 +18,7 @@
 namespace SiteSights\Tracking\WP;
 
 if(!defined("ABSPATH")) { exit; }
-define("SITESIGHTS_TRACKING_VERSION", "1.0.1");
+define("SITESIGHTS_TRACKING_VERSION", "1.1.0");
 
 require_once __DIR__ . "/SiteSights_config.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/SiteSights_Utils.php";
@@ -28,6 +28,7 @@ require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/SiteSights_OwnerActi
 
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/SiteSights_Filters.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/SiteSights_Actions.php";
+require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/SiteSights_Cache.php";
 
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/pages/SiteSights_Renderer.php";
 require_once SITESIGHTS_TRACKING_PLUGIN_DIRECTORY . "common/pages/SiteSights_OptionsPage.php";

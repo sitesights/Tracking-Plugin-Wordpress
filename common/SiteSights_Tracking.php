@@ -30,6 +30,7 @@ class SiteSights_Tracking {
 
         }
 
+        new SiteSights_Cache();
         new SiteSights_Filters();
         new SiteSights_Actions();
 
